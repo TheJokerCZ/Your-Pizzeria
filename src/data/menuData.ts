@@ -46,8 +46,8 @@ export const STATIC_FALLBACK_IMAGES = {
 export const FOODORA_URL = 'https://foodoraeu.go.link/6cW9f';
 
 export const BUSINESS_INFO = {
-  brandName: 'Pizzeria',
-  legalName: 'PIZZERIA s.r.o.',
+  brandName: 'Your Pizzeria',
+  legalName: 'YOUR PIZZERIA s.r.o.',
   ico: '26306701',
   branchAddress: 'Křižíkova 552/17, 586 01 Jihlava',
   registeredAddress: 'Matky Boží 1036/31, 586 01 Jihlava',

@@ -38,7 +38,7 @@ export function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-ink-secondary leading-relaxed max-w-2xl mx-auto">
-            V Pizzerii připravujeme každou pizzu z čerstvého těsta a poctivých surovin ve třech velikostech — od rodinné Jumbo (40 cm) přes Velkou (28 cm) až po Malou (18 cm).
+            V Your Pizzeria připravujeme každou pizzu z čerstvého těsta a poctivých surovin ve třech velikostech — od rodinné Jumbo (40 cm) přes Velkou (28 cm) až po Malou (18 cm).
           </p>
 
           {/* Two Call-to-Action Buttons Centered */}
@@ -108,7 +108,7 @@ export function Hero() {
             {!imageError ? (
               <img
                 src={heroSrc}
-                alt="Čerstvě upečená pizza v Pizzerii Jihlava"
+                alt="Čerstvě upečená pizza v Your Pizzeria Jihlava"
                 referrerPolicy="no-referrer"
                 onError={() => {
                   if (heroSrc !== '/assets/images/hero_pizza_1792529733411.jpg') {
@@ -123,7 +123,7 @@ export function Hero() {
               <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center bg-accent-soft">
                 <UtensilsCrossed className="w-12 h-12 text-accent mb-3" strokeWidth={1.5} />
                 <p className="font-display text-xl font-semibold text-ink">
-                  Pizzeria Jihlava
+                  Your Pizzeria Jihlava
                 </p>
                 <p className="text-sm text-ink-muted mt-1 max-w-xs">
                   {BUSINESS_INFO.branchAddress}

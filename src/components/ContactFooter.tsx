@@ -178,7 +178,7 @@ export function ContactFooter() {
                 viewBox="0 0 800 420"
                 className="w-full h-full object-cover"
                 role="img"
-                aria-label="Mapa okolí Pizzerie na ulici Křižíkova 552/17 v Jihlavě"
+                aria-label="Mapa okolí Your Pizzeria na ulici Křižíkova 552/17 v Jihlavě"
               >
                 <rect width="800" height="420" fill="#F3EFEA" />
                 <path d="M410,20 L650,20 L610,165 L450,210 Z" fill="#DDE9D9" />
@@ -203,7 +203,7 @@ export function ContactFooter() {
               </svg>
 
               <div className="absolute top-4 left-4 bg-surface/95 backdrop-blur-xs px-3.5 py-2 rounded-xl border border-line shadow-xs text-left">
-                <p className="text-xs font-semibold text-ink">Pizzeria</p>
+                <p className="text-xs font-semibold text-ink">Your Pizzeria</p>
                 <p className="text-[11px] text-ink-muted">Křižíkova 552/17, 586 01 Jihlava</p>
               </div>
             </div>

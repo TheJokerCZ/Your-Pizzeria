@@ -11,7 +11,7 @@ export function Navbar() {
           className="inline-flex items-center justify-center gap-3 text-2xl sm:text-3xl font-bold tracking-tight text-ink whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded-lg"
         >
           <Pizza className="w-7 h-7 text-accent shrink-0" strokeWidth={2.2} />
-          <span className="font-display italic font-semibold tracking-normal">Pizzeria</span>
+          <span className="font-display italic font-semibold tracking-normal">Your Pizzeria</span>
         </a>
 
         {/* Zone 2: Navigation Links — Visible & Centered on Both Mobile and Desktop */}
