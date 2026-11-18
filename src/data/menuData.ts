@@ -1,0 +1,371 @@
+import heroPizzaImg from '../assets/images/hero_pizza_1792529733411.jpg';
+import cheesePizzaImg from '../assets/images/pizza_cheese_classic_1792533309792.jpg';
+import hamMushroomPizzaImg from '../assets/images/pizza_ham_mushroom_1792533310681.jpg';
+import salamiSpicyPizzaImg from '../assets/images/pizza_salami_mexican_1792533312604.jpg';
+import gourmetCreamMeatPizzaImg from '../assets/images/pizza_gourmet_meat_cream_1792533313603.jpg';
+import seafoodPizzaImg from '../assets/images/pizza_seafood_shrimp_tuna_1792533314283.jpg';
+
+export interface PizzaItem {
+  id: string;
+  name: string;
+  ingredients: string;
+  priceJumbo: number; // 40 cm (Exact from Foodora PDF)
+  priceLarge: number; // 28 cm (Exact from Foodora PDF)
+  priceSmall: number; // 18 cm (Exact from Foodora PDF)
+  image: string;
+  fallbackImage: string;
+  signatureNote?: string;
+}
+
+export interface OpeningHourRow {
+  days: string;
+  hours: string;
+  note?: string;
+}
+
+export const HERO_IMAGE_PATH = heroPizzaImg;
+
+export const PIZZA_IMAGES = {
+  margherita: heroPizzaImg,
+  cheese: cheesePizzaImg,
+  hamMushroom: hamMushroomPizzaImg,
+  salamiSpicy: salamiSpicyPizzaImg,
+  gourmetCreamMeat: gourmetCreamMeatPizzaImg,
+  seafood: seafoodPizzaImg,
+};
+
+export const STATIC_FALLBACK_IMAGES = {
+  margherita: '/assets/images/hero_pizza_1792529733411.jpg',
+  cheese: '/assets/images/pizza_cheese_classic_1792533309792.jpg',
+  hamMushroom: '/assets/images/pizza_ham_mushroom_1792533310681.jpg',
+  salamiSpicy: '/assets/images/pizza_salami_mexican_1792533312604.jpg',
+  gourmetCreamMeat: '/assets/images/pizza_gourmet_meat_cream_1792533313603.jpg',
+  seafood: '/assets/images/pizza_seafood_shrimp_tuna_1792533314283.jpg',
+};
+
+export const FOODORA_URL = 'https://foodoraeu.go.link/6cW9f';
+
+export const BUSINESS_INFO = {
+  brandName: 'Pizzeria',
+  legalName: 'PIZZERIA s.r.o.',
+  ico: '26306701',
+  branchAddress: 'Křižíkova 552/17, 586 01 Jihlava',
+  registeredAddress: 'Matky Boží 1036/31, 586 01 Jihlava',
+  phoneDisplay: '+420 732 128 140',
+  phoneHref: 'tel:+420732128140',
+  email: 'eva.hons@gmail.com',
+  deliveryService: 'foodora rozvoz (foodora kurýr)',
+  deliveryTrackingNote:
+    'Svou objednávku můžete sledovat v reálném čase a v případě potřeby se spojit s podporou.',
+  minOrderNote: 'Min. objednávka 119 Kč. U objednávek pod 119 Kč je účtován poplatek za malou objednávku.',
+  deliveryFeeNote: 'Servisní poplatek 5 % (min. 7 Kč). Doručuje foodora kurýr.',
+  paymentMethods: [
+    'Platební karta',
+    'Apple Pay',
+    'Google Pay',
+    'Hotovostí při doručení',
+    'Twisto',
+    'Klarna',
+    'Kredit',
+    'Faktura',
+  ],
+};
+
+export const PIZZA_MENU: PizzaItem[] = [
+  {
+    id: 'margarita',
+    name: 'Margarita (1,7)',
+    ingredients: 'drcená rajčata, eidam, sušená bazalka',
+    priceJumbo: 297,
+    priceLarge: 183,
+    priceSmall: 99,
+    image: PIZZA_IMAGES.margherita,
+    fallbackImage: STATIC_FALLBACK_IMAGES.margherita,
+  },
+  {
+    id: 'cipolla',
+    name: 'Cipolla (1,7)',
+    ingredients: 'drcená rajčata, cibule, eidam',
+    priceJumbo: 310,
+    priceLarge: 201,
+    priceSmall: 100,
+    image: PIZZA_IMAGES.hamMushroom,
+    fallbackImage: STATIC_FALLBACK_IMAGES.hamMushroom,
+  },
+  {
+    id: 'sunkova',
+    name: 'Šunková (1,7)',
+    ingredients: 'drcená rajčata, šunka, eidam',
+    priceJumbo: 330,
+    priceLarge: 202,
+    priceSmall: 110,
+    image: PIZZA_IMAGES.hamMushroom,
+    fallbackImage: STATIC_FALLBACK_IMAGES.hamMushroom,
+    signatureNote: 'Populární',
+  },
+  {
+    id: 'paprikova',
+    name: 'Papriková (1,7)',
+    ingredients: 'drcená rajčata, paprikový salám, eidam',
+    priceJumbo: 330,
+    priceLarge: 202,
+    priceSmall: 110,
+    image: PIZZA_IMAGES.salamiSpicy,
+    fallbackImage: STATIC_FALLBACK_IMAGES.salamiSpicy,
+  },
+  {
+    id: 'rocni',
+    name: 'Roční (1,7,12)',
+    ingredients: 'drcená rajčata, cibule, žampiony, šunka, olivy, eidam',
+    priceJumbo: 332,
+    priceLarge: 204,
+    priceSmall: 112,
+    image: PIZZA_IMAGES.hamMushroom,
+    fallbackImage: STATIC_FALLBACK_IMAGES.hamMushroom,
+    signatureNote: 'Populární',
+  },
+  {
+    id: 'zampionova',
+    name: 'Žampionová (1,7,12)',
+    ingredients: 'drcená rajčata, čerstvé žampiony, eidam',
+    priceJumbo: 347,
+    priceLarge: 206,
+    priceSmall: 112,
+    image: PIZZA_IMAGES.hamMushroom,
+    fallbackImage: STATIC_FALLBACK_IMAGES.hamMushroom,
+  },
+  {
+    id: 'syrova',
+    name: 'Sýrová (1,7)',
+    ingredients: 'drcená rajčata, niva, eidam',
+    priceJumbo: 351,
+    priceLarge: 210,
+    priceSmall: 108,
+    image: PIZZA_IMAGES.cheese,
+    fallbackImage: STATIC_FALLBACK_IMAGES.cheese,
+  },
+  {
+    id: 'pizza-s-pecenymi-paprikami',
+    name: 'Pizza s pečenými paprikami',
+    ingredients: 'drcená rajčata, pečené papriky, eidam',
+    priceJumbo: 353,
+    priceLarge: 209,
+    priceSmall: 116,
+    image: PIZZA_IMAGES.salamiSpicy,
+    fallbackImage: STATIC_FALLBACK_IMAGES.salamiSpicy,
+  },
+  {
+    id: 'se-susenymi-rajcaty',
+    name: 'Se sušenými rajčaty (1,7,12)',
+    ingredients: 'smetanový základ, sušená rajčata, mozzarella',
+    priceJumbo: 353,
+    priceLarge: 209,
+    priceSmall: 107,
+    image: PIZZA_IMAGES.margherita,
+    fallbackImage: STATIC_FALLBACK_IMAGES.margherita,
+  },
+  {
+    id: 'salamove-trio',
+    name: 'Salámové trio',
+    ingredients: 'drcená rajčata, hercules, poličan, vysočina, eidam',
+    priceJumbo: 355,
+    priceLarge: 217,
+    priceSmall: 120,
+    image: PIZZA_IMAGES.salamiSpicy,
+    fallbackImage: STATIC_FALLBACK_IMAGES.salamiSpicy,
+    signatureNote: 'Populární',
+  },
+  {
+    id: 'houbovy-special',
+    name: 'Houbový speciál',
+    ingredients: 'smetanový základ, mix lesních hub, sýr Gran Moravia strouhaný',
+    priceJumbo: 362,
+    priceLarge: 215,
+    priceSmall: 120,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+  },
+  {
+    id: 'tri-syru',
+    name: 'Tří sýrů (1,7)',
+    ingredients: 'drcená rajčata, niva, camembert, eidam',
+    priceJumbo: 365,
+    priceLarge: 218,
+    priceSmall: 116,
+    image: PIZZA_IMAGES.cheese,
+    fallbackImage: STATIC_FALLBACK_IMAGES.cheese,
+  },
+  {
+    id: 's-cervenou-cibuli',
+    name: 'S červenou cibulí',
+    ingredients: 'drcená rajčata, slanina, červená cibule, mozzarella',
+    priceJumbo: 368,
+    priceLarge: 219,
+    priceSmall: 124,
+    image: PIZZA_IMAGES.hamMushroom,
+    fallbackImage: STATIC_FALLBACK_IMAGES.hamMushroom,
+    signatureNote: 'Populární',
+  },
+  {
+    id: 'se-spenatem',
+    name: 'Se špenátem (1,7,12)',
+    ingredients: 'drcená rajčata, slanina, špenát, eidam',
+    priceJumbo: 376,
+    priceLarge: 218,
+    priceSmall: 116,
+    image: PIZZA_IMAGES.cheese,
+    fallbackImage: STATIC_FALLBACK_IMAGES.cheese,
+  },
+  {
+    id: 'ctyri-syru',
+    name: 'Čtyř sýrů (1,7)',
+    ingredients: 'drcená rajčata, niva, camembert, uzený sýr, eidam',
+    priceJumbo: 380,
+    priceLarge: 224,
+    priceSmall: 121,
+    image: PIZZA_IMAGES.cheese,
+    fallbackImage: STATIC_FALLBACK_IMAGES.cheese,
+    signatureNote: 'Populární',
+  },
+  {
+    id: 'slaneckova',
+    name: 'Slanečková (1,4,7)',
+    ingredients: 'drcená rajčata, slanečci, eidam',
+    priceJumbo: 380,
+    priceLarge: 226,
+    priceSmall: 124,
+    image: PIZZA_IMAGES.seafood,
+    fallbackImage: STATIC_FALLBACK_IMAGES.seafood,
+  },
+  {
+    id: 'tvaruzkova-pizza',
+    name: 'Tvarůžková pizza',
+    ingredients: 'Smetanový základ s pepřem, červená cibule, tvarůžky, syrečky, jarní cibulka',
+    priceJumbo: 380,
+    priceLarge: 225,
+    priceSmall: 130,
+    image: PIZZA_IMAGES.cheese,
+    fallbackImage: STATIC_FALLBACK_IMAGES.cheese,
+    signatureNote: 'Speciál',
+  },
+  {
+    id: 'mexicka-pizza',
+    name: 'Mexická pizza',
+    ingredients: 'drcená rajčata, kukuřice, pečené papriky, červené fazole, smažená cibulka, čedar, papričky jalapeños',
+    priceJumbo: 385,
+    priceLarge: 233,
+    priceSmall: 121,
+    image: PIZZA_IMAGES.salamiSpicy,
+    fallbackImage: STATIC_FALLBACK_IMAGES.salamiSpicy,
+    signatureNote: 'Pikantní',
+  },
+  {
+    id: 's-mletym-masem',
+    name: 'S mletým masem (1,7)',
+    ingredients: 'drcená rajčata, cibule, mleté maso, eidam',
+    priceJumbo: 392,
+    priceLarge: 230,
+    priceSmall: 124,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+  },
+  {
+    id: 's-klobasou',
+    name: 'S klobásou (1,7)',
+    ingredients: 'drcená rajčata, jemná a pálivá klobása, eidam',
+    priceJumbo: 394,
+    priceLarge: 232,
+    priceSmall: 125,
+    image: PIZZA_IMAGES.salamiSpicy,
+    fallbackImage: STATIC_FALLBACK_IMAGES.salamiSpicy,
+  },
+  {
+    id: 's-kurecim-masem',
+    name: 'S kuřecím masem (1,7)',
+    ingredients: 'smetanový základ, cibule, kuřecí maso, sýr Gran Moravia strouhaný',
+    priceJumbo: 397,
+    priceLarge: 237,
+    priceSmall: 130,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+  },
+  {
+    id: 'se-schwarzwaldskou-sunkou',
+    name: 'Se Schwarzwaldskou šunkou',
+    ingredients: 'drcená rajčata, Schwarzwaldská šunka, černé olivy, mozzarella, sušená bazalka',
+    priceJumbo: 411,
+    priceLarge: 248,
+    priceSmall: 129,
+    image: PIZZA_IMAGES.hamMushroom,
+    fallbackImage: STATIC_FALLBACK_IMAGES.hamMushroom,
+    signatureNote: 'Delikatesa',
+  },
+  {
+    id: 'pizza-ala-burger',
+    name: 'Pizza alá burger',
+    ingredients: 'rajčatový základ, slanina, mleté maso, smažená cibulka, čedar',
+    priceJumbo: 417,
+    priceLarge: 257,
+    priceSmall: 140,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+  },
+  {
+    id: 'pizza-s-veprovou-panenkou',
+    name: 'Pizza s vepřovou panenkou',
+    ingredients: 'smetanový základ s celým pepřem, vepřová panenka, Portobello, strouhaný sýr Gran Moravia',
+    priceJumbo: 417,
+    priceLarge: 257,
+    priceSmall: 140,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+    signatureNote: 'Gourmet',
+  },
+  {
+    id: 'kari-pizza-s-kurecim',
+    name: 'Kari pizza s kuřecím masem',
+    ingredients: 'drcená rajčata, kuřecí maso obalené v kari, žampiony, kukuřice, eidam',
+    priceJumbo: 417,
+    priceLarge: 257,
+    priceSmall: 140,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+  },
+  {
+    id: 'kari-pizza-s-mletym',
+    name: 'Kari pizza s mletým masem',
+    ingredients: 'drcená rajčata, mleté maso obalené v kari, žampiony, kukuřice, eidam',
+    priceJumbo: 417,
+    priceLarge: 257,
+    priceSmall: 140,
+    image: PIZZA_IMAGES.gourmetCreamMeat,
+    fallbackImage: STATIC_FALLBACK_IMAGES.gourmetCreamMeat,
+  },
+  {
+    id: 's-tunakem',
+    name: 'S tuňákem (1,4,7)',
+    ingredients: 'drcená rajčata, cibule, tuňák, eidam',
+    priceJumbo: 418,
+    priceLarge: 251,
+    priceSmall: 128,
+    image: PIZZA_IMAGES.seafood,
+    fallbackImage: STATIC_FALLBACK_IMAGES.seafood,
+  },
+  {
+    id: 'pizza-s-krevetami',
+    name: 'Pizza s krevetami',
+    ingredients: 'smetanový základ, krevety s citronem, plátky sušeného česneku, strouhaný sýr Gran Moravia',
+    priceJumbo: 438,
+    priceLarge: 265,
+    priceSmall: 145,
+    image: PIZZA_IMAGES.seafood,
+    fallbackImage: STATIC_FALLBACK_IMAGES.seafood,
+    signatureNote: 'Mořské plody',
+  },
+];
+
+export const OPENING_HOURS: OpeningHourRow[] = [
+  { days: 'Pondělí – Čtvrtek', hours: '10:00 – 20:45', note: 'Rozvoz i osobní návštěva' },
+  { days: 'Pátek – Sobota', hours: '10:00 – 21:15', note: 'Prodloužený víkendový provoz' },
+  { days: 'Neděle', hours: '11:00 – 20:45', note: 'Nedělní provoz' },
+];
