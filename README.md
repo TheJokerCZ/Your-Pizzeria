@@ -1,6 +1,6 @@
 # Your Pizzeria
 
-Webová aplikace (Single Page App) pro pizzerii v Jihlavě vytvořená v Reactu, TypeScriptu, Tailwind CSS a Lucide React.
+Webová aplikace (Single Page App) pro moderní pizzerii (vzorová šablona) vytvořená v Reactu, TypeScriptu, Tailwind CSS a Lucide React.
 
 ## Lokální spuštění
 

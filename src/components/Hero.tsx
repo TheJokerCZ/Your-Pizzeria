@@ -23,11 +23,11 @@ export function Hero() {
         {/* Full-Width Centered Editorial Hero Header */}
         <div className="max-w-4xl mx-auto text-center space-y-5 sm:space-y-6 mb-10 sm:mb-12">
           <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-medium text-accent italic">
-            <span>Tradiční pizzerie v Jihlavě</span>
+            <span>Tradiční řemeslná pizzerie</span>
             <span aria-hidden="true">·</span>
-            <span>Křižíkova 552/17</span>
+            <span>Italská 123/4, Vaše Město</span>
             <span aria-hidden="true">·</span>
-            <span>Rozvoz po celé Jihlavě</span>
+            <span>Rychlý rozvoz po městě</span>
           </div>
 
           <h1
@@ -38,7 +38,7 @@ export function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg lg:text-xl text-ink-secondary leading-relaxed max-w-2xl mx-auto">
-            V Your Pizzeria připravujeme každou pizzu z čerstvého těsta a poctivých surovin ve třech velikostech — od rodinné Jumbo (40 cm) přes Velkou (28 cm) až po Malou (18 cm).
+            V Your Pizzeria připravujeme každou pizzu z čerstvého těsta a poctivých surovin ve třech velikostech — od rodinné Maxi (40 cm) přes Velkou (28 cm) až po Malou (18 cm).
           </p>
 
           {/* Two Call-to-Action Buttons Centered */}
@@ -72,7 +72,7 @@ export function Hero() {
                 40 cm
               </p>
               <p className="text-xs sm:text-sm text-ink-muted mt-1">
-                Jumbo velikost (i 28 cm a 18 cm)
+                Maxi velikost (i 28 cm a 18 cm)
               </p>
             </div>
 
@@ -108,7 +108,7 @@ export function Hero() {
             {!imageError ? (
               <img
                 src={heroSrc}
-                alt="Čerstvě upečená pizza v Your Pizzeria Jihlava"
+                alt="Čerstvě upečená pizza v Your Pizzeria"
                 referrerPolicy="no-referrer"
                 onError={() => {
                   if (heroSrc !== '/assets/images/hero_pizza_1792529733411.jpg') {
@@ -123,7 +123,7 @@ export function Hero() {
               <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center bg-accent-soft">
                 <UtensilsCrossed className="w-12 h-12 text-accent mb-3" strokeWidth={1.5} />
                 <p className="font-display text-xl font-semibold text-ink">
-                  Your Pizzeria Jihlava
+                  Your Pizzeria
                 </p>
                 <p className="text-sm text-ink-muted mt-1 max-w-xs">
                   {BUSINESS_INFO.branchAddress}
@@ -135,10 +135,10 @@ export function Hero() {
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 sm:p-7 flex flex-col sm:flex-row items-center sm:items-end justify-between text-center sm:text-left text-white gap-2">
               <div>
                 <p className="text-xs sm:text-sm text-white/85 italic">
-                  Křižíkova 552/17, Jihlava
+                  {BUSINESS_INFO.branchAddress}
                 </p>
                 <p className="text-base sm:text-lg font-display font-semibold mt-0.5">
-                  Jumbo (40 cm), Velká (28 cm) i Malá (18 cm) pizza
+                  Maxi (40 cm), Velká (28 cm) i Malá (18 cm) pizza
                 </p>
               </div>
               <div className="hidden sm:flex items-center gap-1.5 text-xs sm:text-sm text-white/90">

@@ -24,7 +24,7 @@ const QUALITY_PILLARS = [
     icon: Truck,
     metric: 'Partner foodora kurýr',
     description:
-      'Rozvoz po celé Jihlavě zajišťuje služba Foodora. Svou objednávku můžete sledovat v reálném čase.',
+      'Rozvoz po městě a okolí zajišťuje partnerská doručovací služba. Svou objednávku můžete sledovat v reálném čase.',
   },
 ];
 
@@ -35,7 +35,7 @@ export function AboutSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-center md:text-left">
           <div className="max-w-2xl space-y-2.5 mx-auto md:mx-0">
             <p className="text-xs sm:text-sm font-medium text-accent">
-              O nás · Your Pizzeria Jihlava
+              O nás · Your Pizzeria
             </p>
             <h2
               className="text-3xl sm:text-4xl font-semibold text-ink tracking-tight font-display"
@@ -44,7 +44,7 @@ export function AboutSection() {
               Proč si dát pizzu právě u nás
             </h2>
             <p className="text-sm sm:text-base text-ink-secondary leading-relaxed">
-              Připravujeme pro vás kompletní sortiment od největší Jumbo pizzy (40 cm) po Malou (18 cm) z těch nejlepších surovin.
+              Připravujeme pro vás kompletní sortiment od největší Maxi pizzy (40 cm) po Malou (18 cm) z těch nejlepších surovin.
             </p>
           </div>
 

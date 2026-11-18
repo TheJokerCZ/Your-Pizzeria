@@ -10,3 +10,4 @@ coverage/
 .aistudio/
 .firebase/
 public/assets/aistudio/
+*.pdf

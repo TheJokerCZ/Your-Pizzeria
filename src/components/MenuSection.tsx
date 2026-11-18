@@ -97,7 +97,7 @@ export function MenuSection() {
               Vyberte si svou oblíbenou velikost pizzy
             </h2>
             <p className="text-sm sm:text-base text-ink-secondary leading-relaxed">
-              Nabízíme naše vyhlášené pizzy ve třech velikostech od největší Jumbo (40 cm) přes Velkou (28 cm) až po Malou (18 cm). Kliknutím na velikost níže se okamžitě přesunete na požadovanou nabídku.
+              Nabízíme naše vyhlášené pizzy ve třech velikostech od největší Maxi (40 cm) přes Velkou (28 cm) až po Malou (18 cm). Kliknutím na velikost níže se okamžitě přesunete na požadovanou nabídku.
             </p>
           </div>
 
@@ -105,10 +105,10 @@ export function MenuSection() {
           <div className="flex flex-wrap items-center justify-center gap-3 w-full pt-2">
             <button
               type="button"
-              onClick={() => scrollToSection('size-jumbo')}
+              onClick={() => scrollToSection('size-maxi')}
               className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-2xl shadow-xs transition-all duration-150 cursor-pointer"
             >
-              <span>JUMBO (40 cm)</span>
+              <span>Maxi (40 cm)</span>
               <ArrowDown className="w-4 h-4" />
             </button>
             <button
@@ -130,16 +130,16 @@ export function MenuSection() {
           </div>
         </div>
 
-        {/* 1. JUMBO SECTION (40 cm) */}
-        <div id="size-jumbo" className="mb-20 scroll-mt-24">
+        {/* 1. MAXI SECTION (40 cm) */}
+        <div id="size-maxi" className="mb-20 scroll-mt-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 pb-4 border-b border-line text-center md:text-left">
             <div>
               <span className="text-xs font-semibold text-accent italic">Největší rozměr</span>
               <h3 className="text-2xl sm:text-3xl font-bold text-ink font-display mt-1">
-                Pizza JUMBO (průměr 40 cm)
+                Pizza Maxi (průměr 40 cm)
               </h3>
               <p className="text-xs sm:text-sm text-ink-muted mt-1">
-                Kompletní nabídka s cenami dle Foodora. Ideální pro větší společnost nebo pořádný hlad.
+                Kompletní nabídka velkých pizz. Ideální pro větší společnost nebo pořádný hlad.
               </p>
             </div>
             <a
@@ -156,11 +156,11 @@ export function MenuSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {PIZZA_MENU.map((pizza) => (
               <PizzaCard
-                key={`jumbo-${pizza.id}`}
+                key={`maxi-${pizza.id}`}
                 pizza={pizza}
-                sizeLabel="Jumbo · 40 cm"
-                priceLabel="Cena Jumbo"
-                priceValue={pizza.priceJumbo}
+                sizeLabel="Maxi · 40 cm"
+                priceLabel="Cena Maxi"
+                priceValue={pizza.priceMaxi}
                 highlightSize
               />
             ))}
